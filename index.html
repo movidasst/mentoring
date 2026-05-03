@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Etiquetas SEO y Open Graph para WhatsApp/LinkedIn -->
+    <title>Mentoría y Asesoría en SST | David Linares Brea</title>
+    <meta name="description" content="De la Reacción a la Prevención. Sesiones personalizadas de Mentoría y Asesoría en Seguridad y Salud en el Trabajo.">
+    <meta property="og:title" content="Mentoría y Asesoría Estratégica en SST">
+    <meta property="og:description" content="¿Necesitas orientación experta para resolver problemas técnicos o mejorar procesos en SST? Agenda tu sesión 1 a 1 con David Linares Brea.">
+    <meta property="og:image" content="https://assets.poap.xyz/04118473-016e-4c9a-83b6-6ae33fbbfd8f.png">
+    <meta property="og:type" content="website">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+        .calendar-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        /* Transiciones suaves para acordeón (FAQ) */
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+        
+        /* Ocultar scrollbar en el menú de pestañas móvil */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Animación suave al cambiar de pestaña */
+        .tab-content {
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="text-slate-800 antialiased flex flex-col min-h-screen">
+
+    <!-- Header Principal -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center sm:justify-between py-4 items-center flex-wrap gap-4">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="https://assets.poap.xyz/04118473-016e-4c9a-83b6-6ae33fbbfd8f.png" alt="SST Mentoring Logo" class="h-16 sm:h-20 w-auto">
+                    <div class="flex flex-col">
+                        <span class="font-bold text-base sm:text-lg tracking-tight text-slate-900 leading-tight">David Linares Brea</span>
+                        <span class="text-xs text-slate-500 font-medium italic">De la Reacción a la Prevención</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Navegación por Pestañas -->
+        <div class="border-t border-slate-200 bg-slate-50">
+            <nav class="flex space-x-2 sm:space-x-8 overflow-x-auto hide-scrollbar px-4 sm:px-6 lg:px-8 justify-start sm:justify-center" aria-label="Tabs">
+                <button data-target="tab-inicio" onclick="openTab('tab-inicio')" class="nav-link whitespace-nowrap py-4 px-3 sm:px-6 border-b-2 font-bold text-sm transition-colors border-blue-600 text-blue-600">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        Inicio
+                    </div>
+                </button>
+                <button data-target="tab-sobre-mi" onclick="openTab('tab-sobre-mi')" class="nav-link whitespace-nowrap py-4 px-3 sm:px-6 border-b-2 font-bold text-sm transition-colors border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        Sobre Mí
+                    </div>
+                </button>
+                <button data-target="tab-agendar" onclick="openTab('tab-agendar')" class="nav-link whitespace-nowrap py-4 px-3 sm:px-6 border-b-2 font-bold text-sm transition-colors border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                        Agendar y Pagos
+                    </div>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal -->
+    <main class="flex-grow">
+
+        <!-- ================= PESTAÑA: INICIO ================= -->
+        <div id="tab-inicio" class="tab-content block">
+            <!-- Hero Section -->
+            <div class="relative bg-white overflow-hidden border-b border-slate-100">
+                <div class="max-w-7xl mx-auto">
+                    <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 pt-12 lg:pt-20 px-4 sm:px-6 lg:px-8">
+                        <div class="sm:text-center lg:text-left">
+                            <span class="text-blue-600 font-semibold tracking-wider uppercase text-sm mb-2 block">Sesiones 1 a 1 y Consultoría B2B</span>
+                            <h1 class="text-4xl tracking-tight font-extrabold text-slate-900 sm:text-5xl md:text-6xl">
+                                <span class="block xl:inline">Mentoría y Asesoría</span>
+                                <span class="block text-blue-600">Profesional en SST</span>
+                            </h1>
+                            <p class="mt-3 text-base text-slate-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                ¿Necesitas orientación experta para fortalecer tus conocimientos, resolver dudas técnicas o destrabar procesos críticos en Seguridad y Salud en el Trabajo? 
+                            </p>
+                            <p class="mt-2 text-sm text-slate-600 font-medium sm:max-w-xl sm:mx-auto lg:mx-0 bg-blue-50 p-3 rounded-lg inline-block border border-blue-100">
+                                🧠 Sesiones enfocadas, prácticas y adaptadas al nivel de tu empresa o perfil profesional.
+                            </p>
+                            
+                            <div class="mt-8 flex flex-col sm:flex-row gap-4 sm:justify-center lg:justify-start">
+                                <button onclick="openTab('tab-agendar')" class="inline-flex justify-center items-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 md:py-4 md:text-lg md:px-10 shadow-lg hover:shadow-xl transition">
+                                    Ver Disponibilidad y Pagos
+                                </button>
+                                <button onclick="openTab('tab-sobre-mi')" class="inline-flex justify-center items-center px-8 py-3 border border-slate-300 text-base font-medium rounded-md text-slate-700 bg-white hover:bg-slate-50 md:py-4 md:text-lg md:px-10 transition">
+                                    Conoce al Mentor
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-slate-50 flex items-center justify-center p-8 hidden lg:flex">
+                    <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full rounded-2xl shadow-2xl" src="https://drive.google.com/thumbnail?id=1eFlwQrvJvbcgv-4UF5P_wzpwpwzS5gKY&sz=w1200" alt="David Linares Brea - Mentor SST">
+                </div>
+            </div>
+
+            <!-- El Valor Real -->
+            <section class="py-16 bg-slate-50">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="lg:text-center mb-12">
+                        <h2 class="text-base text-blue-600 font-semibold tracking-wide uppercase">El Valor Real</h2>
+                        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl text-slate-900">¿Por qué agendar una sesión?</p>
+                        <p class="mt-4 max-w-2xl text-xl text-slate-500 lg:mx-auto">
+                            A diferencia de un curso donde recibes teoría general, la mentoría y asesoría es un <strong>acompañamiento estratégico, táctico y 100% aplicable</strong> a tu realidad.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 mt-10">
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="text-blue-600 mb-4">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">De la Teoría a la Práctica</h3>
+                            <p class="text-slate-600">Cero plantillas genéricas. Aplicamos la normativa legal y normas ISO directamente a los problemas operativos de tu empresa o rol profesional.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="text-blue-600 mb-4">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Innovación y Tecnología</h3>
+                            <p class="text-slate-600">Aprende a integrar herramientas como la Inteligencia Artificial para optimizar procesos, documentar más rápido y analizar datos de SST.</p>
+                        </div>
+                        <div class="bg-white p-8 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                            <div class="text-blue-600 mb-4">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">Resolución de Cuellos de Botella</h3>
+                            <p class="text-slate-600">¿Atrapado en un IPERC complejo o una auditoría próxima? Despejamos el camino con tácticas probadas en sectores de alta exigencia.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Áreas de Experiencia -->
+            <section class="py-16 bg-white border-t border-slate-100">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-extrabold text-slate-900">¿En qué áreas te apoyo?</h2>
+                        <p class="mt-4 text-lg text-slate-500 max-w-3xl mx-auto">
+                            Ideal para empresas, prevencionistas, estudiantes y emprendedores que requieran apoyo directo en:
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-5xl mx-auto">
+                        <div class="flex items-start p-5 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-blue-500 text-xl mt-1">✅</span>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-bold text-slate-800">Diseño instruccional e IA</h4>
+                                <p class="text-sm text-slate-600 mt-1">Creación de capacitaciones dinámicas con apoyo de Inteligencia Artificial que realmente impacten.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-5 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-blue-500 text-xl mt-1">✅</span>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-bold text-slate-800">Elaboración y revisión de PSSST</h4>
+                                <p class="text-sm text-slate-600 mt-1">Estructuración estratégica del Programa Anual de Seguridad y Salud según tu contexto operativo.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-5 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-blue-500 text-xl mt-1">✅</span>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-bold text-slate-800">Planes de emergencia y simulacros</h4>
+                                <p class="text-sm text-slate-600 mt-1">Diseño de planes de respuesta efectivos, cálculo de recursos y creación de escenarios realistas.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-5 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-blue-500 text-xl mt-1">✅</span>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-bold text-slate-800">IPERC Avanzado</h4>
+                                <p class="text-sm text-slate-600 mt-1">Metodologías objetivas y auditables para la Identificación de Peligros y Evaluación de Riesgos.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-5 bg-slate-50 rounded-xl border border-slate-100">
+                            <span class="text-blue-500 text-xl mt-1">✅</span>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-bold text-slate-800">Cumplimiento Legal y Auditorías</h4>
+                                <p class="text-sm text-slate-600 mt-1">Gestión documental, formatos obligatorios, PETS y preparación frente a fiscalizaciones.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start p-5 bg-blue-50 rounded-xl border border-blue-100">
+                            <span class="text-blue-600 text-xl mt-1">💡</span>
+                            <div class="ml-3">
+                                <h4 class="text-lg font-bold text-blue-900">Mentoría a Medida</h4>
+                                <p class="text-sm text-blue-800 mt-1">¿Investigación de accidentes? ¿Comités SST? ¿Liderazgo? Plantea tu necesidad específica y la abordamos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PESTAÑA: SOBRE MÍ ================= -->
+        <div id="tab-sobre-mi" class="tab-content hidden">
+            <!-- Sobre Mí -->
+            <section class="py-16 bg-slate-900 text-white relative overflow-hidden">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                        <div class="mb-10 lg:mb-0">
+                            <h2 class="text-base text-blue-400 font-semibold tracking-wide uppercase">El Mentor</h2>
+                            <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight sm:text-4xl mb-6">
+                                David Linares Brea
+                            </h3>
+                            <p class="text-xl text-blue-300 font-medium mb-6">Auditor ISO 45001 | Promotor de Comunidades Colaborativas & Líder Disruptivo</p>
+                            
+                            <div class="space-y-4 text-slate-300 text-lg leading-relaxed">
+                                <p>
+                                    Como <strong class="text-white">Auditor ISO 45001</strong>, cuento con <strong class="text-white">más de 25 años de experiencia operativa</strong> en Latinoamérica. Mi trayectoria, iniciada en Caracas en el año 2000 y consolidada hoy desde Chile, se ha forjado en la alta exigencia de sectores críticos como la <span class="text-blue-300">aeronáutica, salud, telecomunicaciones, educación y automotriz</span>.
+                                </p>
+                                <p>
+                                    Mi enfoque transforma la prevención de riesgos: <strong>traduzco normativas legales complejas en estrategias operativas que protegen vidas</strong>. He liderado la modernización de nuestro sector integrando tecnologías como la <strong class="text-white">Inteligencia Artificial para agilizar y optimizar la gestión en SST</strong>, impulsando una comunidad preventiva que hoy supera los 34.000 profesionales.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute inset-0 bg-blue-500 rounded-3xl transform rotate-3 scale-105 opacity-20"></div>
+                            <img src="https://drive.google.com/thumbnail?id=1eFlwQrvJvbcgv-4UF5P_wzpwpwzS5gKY&sz=w800" alt="David Linares Brea" class="relative rounded-3xl shadow-2xl border border-slate-700 w-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonios -->
+            <section class="py-16 bg-slate-50 border-t border-slate-200">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-10">Lo que dicen profesionales del sector</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Testimonio 1 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex text-yellow-400 mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-slate-600 italic mb-4">"David es uno de los mejores profesionales que conozco en SST/PRL. Siempre anda buscando formas nuevas y novedosas de llevar esos temas a la gente y formarla de la mejor manera posible usando todos los recursos tecnológicos disponibles."</p>
+                            <p class="font-bold text-slate-900 text-sm">— Alexander Briceño</p>
+                            <p class="text-xs text-slate-500">Evangelista en SST | Conferencista</p>
+                        </div>
+                        <!-- Testimonio 2 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex text-yellow-400 mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-slate-600 italic mb-4">"Puedo dar fe que es un profesional con altísimo nivel técnico, altruista y líder por naturaleza. Es muy gratificante trabajar con él porque siempre se centra en buscar soluciones y alternativas para alcanzar las metas propuestas."</p>
+                            <p class="font-bold text-slate-900 text-sm">— José Gregorio Méndez</p>
+                            <p class="text-xs text-slate-500">Profesional y Líder de Proyectos</p>
+                        </div>
+                        <!-- Testimonio 3 -->
+                        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                            <div class="flex text-yellow-400 mb-4">
+                                ★★★★★
+                            </div>
+                            <p class="text-slate-600 italic mb-4">"David es un excelente profesional, proactivo, creativo, innovador y en constante evolución. Apoya el desarrollo profesional de otros y establece alianzas estratégicas basadas en la confianza y el apoyo mutuo."</p>
+                            <p class="font-bold text-slate-900 text-sm">— Gisela Blanco Gomez</p>
+                            <p class="text-xs text-slate-500">Psicóloga Ocupacional</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= PESTAÑA: AGENDAR Y PAGOS ================= -->
+        <div id="tab-agendar" class="tab-content hidden">
+            <!-- Agenda y Pagos -->
+            <section class="py-16 bg-slate-900 text-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Agenda tu sesión de 45 Minutos</h2>
+                        <p class="text-slate-400 text-lg max-w-2xl mx-auto">Sigue estos 3 simples pasos para reservar tu espacio y comenzar a transformar tu gestión preventiva.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                        
+                        <!-- Columna Izquierda: Instrucciones y Pagos -->
+                        <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-xl">
+                            <h3 class="text-2xl font-bold text-white mb-6 border-b border-slate-700 pb-4">Pasos a seguir:</h3>
+                            
+                            <ul class="space-y-6 mb-8 text-slate-300">
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold mr-4">1</span>
+                                    <div>
+                                        <strong class="text-white block mb-1">Realiza el pago de la sesión</strong>
+                                        <p class="text-sm">Utiliza cualquiera de los medios oficiales detallados abajo.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold mr-4">2</span>
+                                    <div>
+                                        <strong class="text-white block mb-1">Reserva en el Calendario</strong>
+                                        <p class="text-sm">Selecciona el día y hora en el panel de la derecha. En el formulario adjunta el comprobante o notifícalo a <a href="mailto:info@movidasst.com" class="text-blue-400 hover:underline">info@movidasst.com</a>.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="flex-shrink-0 w-8 h-8 flex items-center justify-center bg-blue-600 text-white rounded-full font-bold mr-4">3</span>
+                                    <div>
+                                        <strong class="text-white block mb-1">Conéctate vía Google Meet</strong>
+                                        <p class="text-sm">Recibirás automáticamente el enlace a tu correo. Prepárate para 45 minutos de trabajo focalizado.</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <!-- Tarjeta de Medios de Pago -->
+                            <div class="bg-slate-900 rounded-xl p-5 border border-slate-600 relative">
+                                <h4 class="text-lg font-bold text-blue-400 mb-4 flex items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
+                                    Medios de Pago Oficiales
+                                </h4>
+                                
+                                <div class="space-y-4 text-sm font-mono text-slate-300">
+                                    <!-- Pago Movil -->
+                                    <div class="bg-slate-800 p-3 rounded border border-slate-700">
+                                        <span class="block font-bold text-white font-sans text-xs uppercase mb-1">Pago Móvil (Bs) - Bco. Venezuela</span>
+                                        0412-6372223<br>
+                                        V-30.407.087<br>
+                                        Ezequiel Linares
+                                    </div>
+                                    
+                                    <!-- Transferencia -->
+                                    <div class="bg-slate-800 p-3 rounded border border-slate-700">
+                                        <span class="block font-bold text-white font-sans text-xs uppercase mb-1">Transferencia Banco de Venezuela</span>
+                                        Corriente: 0102-0236-1500-0033-6732<br>
+                                        C.I: 30.407.087<br>
+                                        Ezequiel Linares
+                                    </div>
+
+                                    <!-- Binance -->
+                                    <div class="bg-slate-800 p-3 rounded border border-slate-700">
+                                        <span class="block font-bold text-[#FCD535] font-sans text-xs uppercase mb-1">Binance (USDT)</span>
+                                        Red: BEP20 (BSC)<br>
+                                        ID: 176067584<br>
+                                        Correo: david.linaresb@gmail.com
+                                    </div>
+                                </div>
+
+                                <button id="copyBtn" onclick="copyPaymentInfo()" class="mt-5 w-full bg-slate-700 hover:bg-slate-600 text-white font-bold py-3 px-4 rounded transition flex justify-center items-center gap-2">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                                    Copiar Datos Completos
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Columna Derecha: Calendario -->
+                        <div class="bg-white rounded-2xl p-6 md:p-8 border border-slate-200 shadow-xl flex flex-col items-center justify-center min-h-[500px]">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-2 text-center">Calendario de Disponibilidad</h3>
+                            <p class="text-slate-500 text-sm mb-6 text-center">Selecciona tu zona horaria y elige tu espacio.</p>
+                            
+                            <div class="w-full flex justify-center scale-110 origin-top">
+                                <!-- GOOGLE CALENDAR BUTTON BEGIN -->
+                                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                                <script>
+                                (function() {
+                                  var target = document.currentScript;
+                                  window.addEventListener('load', function() {
+                                    calendar.schedulingButton.load({
+                                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ1xhx5AP6_k6EqDkEhLdA83NUIifHo3vXW6uVTUiEYKyV8YP7nkN8wEv4XZxXCVv1pIM35M6s7q?gv=true',
+                                      color: '#039BE5',
+                                      label: 'Ver Horarios y Reservar',
+                                      target,
+                                    });
+                                  });
+                                })();
+                                </script>
+                                <!-- GOOGLE CALENDAR BUTTON END -->
+                            </div>
+                            <p class="mt-8 text-xs text-slate-400 text-center">Serás redirigido a la plataforma segura de Google Meet para completar tu reserva.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Preguntas Frecuentes -->
+            <section class="py-16 bg-white border-t border-slate-100">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 class="text-3xl font-extrabold text-center text-slate-900 mb-10">Preguntas Frecuentes</h2>
+                    
+                    <div class="space-y-4">
+                        <details class="group bg-slate-50 p-6 rounded-xl cursor-pointer">
+                            <summary class="flex justify-between items-center font-bold text-slate-800">
+                                <span>¿Para quién es exactamente esta mentoría?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <p class="text-slate-600 mt-3 leading-relaxed">
+                                Está diseñada para Gerentes y Jefes de HSEQ, Prevencionistas de Riesgos, Estudiantes de áreas afines y Directores de empresas que necesitan destrabar procesos, cumplir normativas de forma ágil o integrar herramientas tecnológicas (como IA) a su gestión documental.
+                            </p>
+                        </details>
+
+                        <details class="group bg-slate-50 p-6 rounded-xl cursor-pointer">
+                            <summary class="flex justify-between items-center font-bold text-slate-800">
+                                <span>¿La sesión queda grabada?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <p class="text-slate-600 mt-3 leading-relaxed">
+                                Sí. Toda la sesión realizada por Google Meet puede ser grabada si así lo autorizas. De esta manera podrás revisar el paso a paso, los consejos y las estrategias que conversemos las veces que lo necesites.
+                            </p>
+                        </details>
+
+                        <details class="group bg-slate-50 p-6 rounded-xl cursor-pointer">
+                            <summary class="flex justify-between items-center font-bold text-slate-800">
+                                <span>¿Tengo que preparar algo antes de conectarme?</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </span>
+                            </summary>
+                            <p class="text-slate-600 mt-3 leading-relaxed">
+                                Es altamente recomendable. Para aprovechar al máximo los 45 minutos, te sugiero tener a la mano el documento, IPERC, duda normativa o problema específico que quieres resolver para ir directo a la práctica.
+                            </p>
+                        </details>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+    <!-- Footer (Siempre visible) -->
+    <footer class="bg-slate-900 py-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-400">
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <img src="https://assets.poap.xyz/04118473-016e-4c9a-83b6-6ae33fbbfd8f.png" alt="SST Mentoring Logo" class="h-24 w-24 object-cover rounded-full grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition bg-slate-800/50">
+                <div class="text-left">
+                    <span class="font-bold text-white tracking-wider block text-lg">David Linares Brea</span>
+                    <span class="text-sm text-blue-400 italic">De la Reacción a la Prevención</span>
+                </div>
+            </div>
+            
+            <p class="text-sm max-w-lg mx-auto">Promoviendo comunidades colaborativas y potenciando profesionales hacia una cultura de cero accidentes, integrando tecnología y estrategia aplicada.</p>
+            
+            <div class="mt-6 flex flex-wrap justify-center items-center gap-4 text-sm">
+                <a href="mailto:info@movidasst.com" class="flex items-center gap-2 hover:text-blue-400 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    info@movidasst.com
+                </a>
+                <span class="hidden md:block text-slate-600">|</span>
+                <a href="https://davidlinares.movidasst.com" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-400 transition">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+                    Web
+                </a>
+                <span class="hidden md:block text-slate-600">|</span>
+                <a href="https://www.linkedin.com/in/davidlinaresbrea/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-blue-400 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    LinkedIn
+                </a>
+                <span class="hidden md:block text-slate-600">|</span>
+                <a href="https://wa.me/56968615650" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 hover:text-green-400 transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
+            </div>
+
+            <p class="text-sm mt-8 pt-4 border-t border-slate-800">&copy; 2026 David Linares Brea. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp -->
+    <a href="https://wa.me/56968615650" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all z-50 flex items-center justify-center" aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Scripts de Interacción (Pestañas y Copiar Portapapeles) -->
+    <script>
+        // Función para manejar las Pestañas (Tabs)
+        function openTab(tabId) {
+            // Ocultar todas las pestañas
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('block');
+                tab.classList.add('hidden');
+            });
+
+            // Reiniciar los estilos de todos los botones de navegación
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.classList.remove('border-blue-600', 'text-blue-600');
+                link.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            // Mostrar la pestaña seleccionada
+            document.getElementById(tabId).classList.remove('hidden');
+            document.getElementById(tabId).classList.add('block');
+
+            // Marcar como activo el botón clickeado
+            const activeBtn = document.querySelector(`[data-target="${tabId}"]`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-transparent', 'text-slate-500');
+                activeBtn.classList.add('border-blue-600', 'text-blue-600');
+            }
+
+            // Hacer scroll hacia arriba al cambiar de pestaña
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Función para copiar la información de pago
+        function copyPaymentInfo() {
+            const textToCopy = `Medios de Pago Oficiales - David Linares Brea\n\nPago Móvil (Bs) - Banco de Venezuela\n0412-6372223\nV-30.407.087\nEzequiel Linares\n\nTransferencia - Banco de Venezuela\nCorriente: 0102-0236-1500-0033-6732\nC.I: 30.407.087\nEzequiel Linares\n\nBinance (USDT)\nRed: BEP20 (BSC)\nID: 176067584\nCorreo: david.linaresb@gmail.com`;
+
+            const textArea = document.createElement("textarea");
+            textArea.value = textToCopy;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                const btn = document.getElementById('copyBtn');
+                const originalHTML = btn.innerHTML;
+                btn.innerHTML = '¡Datos Copiados Exitosamente! ✅';
+                btn.classList.replace('bg-slate-700', 'bg-green-600');
+                btn.classList.replace('hover:bg-slate-600', 'hover:bg-green-700');
+                
+                setTimeout(() => { 
+                    btn.innerHTML = originalHTML; 
+                    btn.classList.replace('bg-green-600', 'bg-slate-700');
+                    btn.classList.replace('hover:bg-green-700', 'hover:bg-slate-600');
+                }, 3000);
+            } catch (err) {
+                alert('No se pudo copiar el texto. Por favor, selecciona y copia manualmente.');
+            }
+            document.body.removeChild(textArea);
+        }
+    </script>
+</body>
+</html>
