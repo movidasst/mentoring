@@ -1,0 +1,38 @@
+name: fix mentoring logo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-mentoring-logo.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  fix-logo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replace logo with public Drive image
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('index.html')
+          s = p.read_text(encoding='utf-8')
+          old = '<img src="/assets/logo-oficial-movida-sst-plus.webp" alt="Logo oficial La Movida de SST Plus">'
+          new = '<img src="https://drive.google.com/thumbnail?id=1nQ1V4muPUloRvng3WlcGtZBHpQtAW89B&sz=w1000" alt="Logo oficial La Movida de SST Plus" style="background:#fff;border-radius:50%;padding:4px;box-shadow:0 10px 26px rgba(0,32,91,.18);object-fit:contain">'
+          count = s.count(old)
+          if count != 3:
+              raise SystemExit(f'Expected 3 logo occurrences, found {count}')
+          s = s.replace(old, new)
+          p.write_text(s, encoding='utf-8')
+          print('Replaced', count, 'logo occurrences')
+          PY
+      - name: Commit corrected index
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "Usa logo público de Drive en Mentoring" || exit 0
+          git push
