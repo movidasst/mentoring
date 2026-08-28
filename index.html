@@ -128,7 +128,7 @@
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
     body {
       margin: 0;
       min-width: 320px;
@@ -144,7 +144,7 @@
     button, a { -webkit-tap-highlight-color: transparent; }
     button, input, textarea, select { font: inherit; }
     :focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
-    [id] { scroll-margin-top: 90px; }
+    [id] { scroll-margin-top: 100px; }
 
     .container { width: min(calc(100% - 32px), var(--max)); margin-inline: auto; }
     .section { padding: 64px 0; }
@@ -186,9 +186,21 @@
       background: rgba(255,255,255,.94);
       backdrop-filter: blur(14px);
     }
-    .header-row { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
-    .brand { display: inline-flex; align-items: center; gap: 10px; min-width: 0; text-decoration: none; }
-    .brand img { width: 46px; height: 46px; flex: 0 0 auto; object-fit: contain; }
+    .header-row { min-height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; min-width: 0; text-decoration: none; }
+    .brand img {
+      width: 64px;
+      height: 64px;
+      flex: 0 0 auto;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 4px;
+      border: 1px solid rgba(0,123,133,.18);
+      box-shadow: 0 10px 24px rgba(0,32,91,.16), 0 0 0 6px rgba(255,255,255,.78);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .brand:hover img { transform: translateY(-1px) scale(1.035); box-shadow: 0 14px 28px rgba(0,32,91,.20), 0 0 0 7px rgba(255,255,255,.9); }
     .brand-copy { min-width: 0; }
     .brand-title { display: block; color: var(--navy); font-size: 1rem; font-weight: 800; line-height: 1.05; }
     .brand-subtitle { display: block; margin-top: 3px; color: var(--muted); font-size: .72rem; line-height: 1.05; white-space: nowrap; }
@@ -233,6 +245,30 @@
     .hero::after { content: ""; position: absolute; inset: auto -90px -130px auto; width: 260px; height: 260px; border: 48px solid rgba(0,32,91,.035); border-radius: 50%; pointer-events: none; }
     .hero-grid { position: relative; z-index: 2; display: grid; gap: 30px; padding: 34px 0 48px; }
     .hero-copy { align-self: center; }
+    .hero-brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      width: fit-content;
+      margin: 0 0 22px;
+      padding: 10px 16px 10px 10px;
+      border: 1px solid #dbe8ea;
+      border-radius: 999px;
+      background: rgba(255,255,255,.92);
+      box-shadow: 0 16px 36px rgba(0,32,91,.10);
+    }
+    .hero-brand-lockup img {
+      width: 104px;
+      height: 104px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: white;
+      padding: 5px;
+      border: 1px solid rgba(0,123,133,.18);
+      box-shadow: 0 12px 26px rgba(0,32,91,.18), 0 0 0 7px rgba(232,246,246,.9);
+    }
+    .hero-brand-lockup strong { display: block; color: var(--navy); font-size: 1rem; line-height: 1.1; }
+    .hero-brand-lockup span { display: block; margin-top: 4px; color: var(--teal-dark); font-size: .78rem; font-weight: 700; }
     .hero h1 span { color: var(--teal); }
     .hero-lead { max-width: 680px; margin-bottom: 20px; color: #526277; font-size: 1.08rem; }
     .hero-actions { display: grid; gap: 10px; margin: 22px 0 18px; }
@@ -345,8 +381,17 @@
 
     footer { padding: 42px 0 94px; background: #061c3f; color: #afbdd0; }
     .footer-grid { display: grid; gap: 24px; }
-    .footer-brand { display: flex; align-items: center; gap: 12px; }
-    .footer-brand img { width: 58px; height: 58px; object-fit: contain; }
+    .footer-brand { display: flex; align-items: center; gap: 16px; }
+    .footer-brand img {
+      width: 76px;
+      height: 76px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 5px;
+      border: 1px solid rgba(255,255,255,.32);
+      box-shadow: 0 14px 30px rgba(0,0,0,.28), 0 0 0 7px rgba(255,255,255,.08);
+    }
     .footer-brand strong { display: block; color: white; }
     .footer-brand span { display: block; color: #91d9dd; font-size: .82rem; }
     .footer-links { display: flex; flex-wrap: wrap; gap: 9px 16px; }
@@ -371,6 +416,13 @@
     }
     .mobile-cta .btn { min-height: 46px; padding: 10px 12px; font-size: .89rem; }
 
+    @media (max-width: 420px) {
+      .brand img { width: 58px; height: 58px; }
+      .brand-subtitle { white-space: normal; max-width: 145px; }
+      .hero-brand-lockup { width: 100%; border-radius: 22px; }
+      .hero-brand-lockup img { width: 92px; height: 92px; }
+    }
+
     @media (min-width: 560px) {
       .hero-actions, .service-actions, .final-actions { grid-template-columns: repeat(2, max-content); }
       .hero-actions .btn, .service-actions .btn, .final-actions .btn { min-width: 190px; }
@@ -385,14 +437,15 @@
       .container { width: min(calc(100% - 48px), var(--max)); }
       .mobile-cta { display: none; }
       footer { padding-bottom: 42px; }
-      .header-row { min-height: 80px; }
-      .brand img { width: 54px; height: 54px; }
+      .header-row { min-height: 94px; }
+      .brand img { width: 76px; height: 76px; }
       .brand-title { font-size: 1.1rem; }
       .brand-subtitle { font-size: .77rem; }
       .desktop-nav { display: flex; }
       .header-mobile-action { display: none; }
       .hero-grid { grid-template-columns: 1.13fr .87fr; gap: 50px; padding: 72px 0 76px; }
       .hero-visual { order: initial; }
+      .hero-brand-lockup img { width: 124px; height: 124px; }
       .hero-actions { display: flex; flex-wrap: wrap; }
       .hero-meta li { font-size: .86rem; }
       .audience-grid { gap: 18px; }
@@ -428,7 +481,7 @@
   <header class="site-header">
     <div class="container header-row">
       <a class="brand" href="#inicio" aria-label="Mentoring SST, inicio">
-        <img src="https://raw.githubusercontent.com/movidasst/principal/main/logo-movida-sst-plus.svg" width="54" height="54" alt="La Movida de SST Plus">
+        <img src="/assets/logo-oficial-movida-sst-plus.webp" width="160" height="160" alt="Logo oficial La Movida de SST Plus">
         <span class="brand-copy">
           <span class="brand-title">Mentoring SST</span>
           <span class="brand-subtitle">by La Movida de SST Plus</span>
@@ -452,6 +505,10 @@
     <section class="hero" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy">
+          <div class="hero-brand-lockup" aria-label="Identidad oficial de La Movida de SST Plus">
+            <img src="/assets/logo-oficial-movida-sst-plus.webp" width="160" height="160" alt="Logo oficial La Movida de SST Plus">
+            <div><strong>La Movida de SST Plus</strong><span>De la Reacción a la Prevención</span></div>
+          </div>
           <p class="eyebrow">Mentoría 1 a 1 · Asesoría B2B</p>
           <h1>Destraba ese problema de SST que <span>no debería seguir esperando.</span></h1>
           <p class="hero-lead">Trabajamos directamente sobre tu caso, documento, decisión o proceso. Menos teoría genérica; más criterio técnico, estrategia y próximos pasos aplicables a tu realidad.</p>
@@ -753,7 +810,7 @@
       <div class="footer-grid">
         <div>
           <div class="footer-brand">
-            <img src="https://raw.githubusercontent.com/movidasst/principal/main/logo-movida-sst-plus.svg" width="58" height="58" loading="lazy" alt="La Movida de SST Plus">
+            <img src="/assets/logo-oficial-movida-sst-plus.webp" width="160" height="160" loading="lazy" alt="Logo oficial La Movida de SST Plus">
             <div><strong>Mentoring SST · David Linares Brea</strong><span>La Movida de SST Plus · De la Reacción a la Prevención</span></div>
           </div>
         </div>
