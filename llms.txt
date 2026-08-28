@@ -1,0 +1,39 @@
+# Mentoring SST · La Movida de SST Plus
+
+> Servicio de mentoría y asesoría estratégica en Seguridad y Salud en el Trabajo (SST) dirigido por David Linares Brea.
+
+Canonical: https://mentoring.movidasst.com/
+Language: es
+Region: Latinoamérica
+
+## Servicio principal
+
+Sesión Estratégica SST 1 a 1: espacio online de 45 minutos por Google Meet para analizar un problema, documento, decisión o proceso específico de SST y definir próximos pasos aplicables.
+
+## Áreas frecuentes
+
+- Identificación de peligros, evaluación de riesgos, IPERC y procesos peligrosos.
+- ISO 45001, auditorías y sistemas de gestión.
+- PSSST, procedimientos y cumplimiento.
+- Indicadores y análisis de datos SST.
+- Capacitación, diseño instruccional, e-learning y LMS.
+- Inteligencia artificial aplicada responsablemente a SST.
+- Higiene ocupacional, ergonomía y emergencias.
+- Investigación de accidentes y toma de decisiones preventivas.
+
+## Modalidades
+
+- Mentoría individual para profesionales.
+- Asesoría con alcance específico para empresas y equipos.
+
+## Responsable
+
+David Linares Brea
+Perfil: https://davidlinares.movidasst.com/
+LinkedIn: https://www.linkedin.com/in/davidlinaresbrea/
+Marca: https://www.movidasst.com/
+Contacto: info@movidasst.com
+
+## Principio
+
+De la Reacción a la Prevención.
