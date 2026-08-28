@@ -1,0 +1,3 @@
+OG target: https://mentoring.movidasst.com/og-mentoring.jpg
+Logo target: https://mentoring.movidasst.com/assets/logo-oficial-movida-sst-plus.png
+Favicon target: https://mentoring.movidasst.com/favicon.ico
