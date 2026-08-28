@@ -1,0 +1,1 @@
+El activo oficial de marca usado por Mentoring SST es assets/logo-oficial-movida-sst-plus.webp, derivado directamente de la imagen oficial suministrada el 28-08-2026. No sustituir por logos genéricos o generados.
