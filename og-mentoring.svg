@@ -1,26 +1,45 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">Mentoring SST con David Linares Brea</title>
-  <desc id="desc">Imagen social de Mentoring SST, por La Movida de SST Plus.</desc>
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#00205b"/>
-      <stop offset="1" stop-color="#007b85"/>
-    </linearGradient>
-    <radialGradient id="glow" cx="1" cy="0" r="1">
-      <stop offset="0" stop-color="#70ad47" stop-opacity=".42"/>
-      <stop offset="1" stop-color="#70ad47" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect width="1200" height="630" fill="url(#glow)"/>
-  <circle cx="1045" cy="125" r="150" fill="none" stroke="#ffffff" stroke-opacity=".08" stroke-width="44"/>
-  <circle cx="1045" cy="125" r="76" fill="#ffb600" opacity=".95"/>
-  <rect x="78" y="70" width="118" height="8" rx="4" fill="#ffb600"/>
-  <text x="78" y="142" fill="#9be5e8" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" letter-spacing="4">LA MOVIDA DE SST PLUS</text>
-  <text x="78" y="265" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="88" font-weight="800">MENTORING SST</text>
-  <text x="78" y="344" fill="#d9f5f6" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="600">De la duda técnica a una decisión aplicable.</text>
-  <text x="78" y="436" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">David Linares Brea</text>
-  <text x="78" y="486" fill="#bdd5e5" font-family="Arial, Helvetica, sans-serif" font-size="27">Auditor ISO 45001 · SST · Aprendizaje · Tecnología</text>
-  <rect x="78" y="535" width="425" height="56" rx="28" fill="#ffffff" fill-opacity=".12" stroke="#ffffff" stroke-opacity=".25"/>
-  <text x="106" y="572" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">mentoring.movidasst.com</text>
+<title id="title">Mentoring SST Plus — La Movida de SST</title><desc id="desc">Previsualización original del programa de mentoría profesional individual en Seguridad y Salud en el Trabajo.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#001638"/><stop offset=".54" stop-color="#002a5f"/><stop offset="1" stop-color="#007b85"/></linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffce37"/><stop offset="1" stop-color="#ff9f00"/></linearGradient>
+<linearGradient id="phone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7fcfd"/><stop offset="1" stop-color="#dbeff0"/></linearGradient>
+<filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="14" stdDeviation="12" flood-color="#00102b" flood-opacity=".36"/></filter>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<path d="M600-50 Q900 60 1170-20L1210 130Q1030 160 850 120Q700 90 600 175Z" fill="#23a5a9" opacity=".13"/>
+<circle cx="1145" cy="80" r="240" fill="#2ac0bb" opacity=".08"/>
+<path d="M0 525Q330 445 610 535T1200 500V630H0Z" fill="#007b85" opacity=".18"/>
+<path d="M0 563Q340 487 610 572T1200 560" fill="none" stroke="#ffb600" stroke-width="4" opacity=".6"/>
+<rect x="66" y="55" width="64" height="6" rx="3" fill="#ffb600"/>
+<text x="66" y="100" fill="#a6f4f3" font-size="23" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700" letter-spacing="3">LA MOVIDA DE SST PLUS</text>
+<text x="62" y="194" fill="#ffffff" font-size="68" font-family="DejaVu Sans,Arial,sans-serif" font-weight="800" letter-spacing="-2">MENTORING</text>
+<text x="62" y="271" fill="#ffffff" font-size="76" font-family="DejaVu Sans,Arial,sans-serif" font-weight="800" letter-spacing="-2">SST</text>
+<text x="227" y="271" fill="url(#gold)" font-size="76" font-family="DejaVu Sans,Arial,sans-serif" font-style="italic" font-weight="800" letter-spacing="-2">PLUS</text>
+<path d="M428 242l31-25 27 10 32-48" fill="none" stroke="#ffb600" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M495 181l23-2-3 23" fill="none" stroke="#ffb600" stroke-width="8" stroke-linecap="round"/>
+<rect x="65" y="304" width="558" height="103" rx="20" fill="#053d62" stroke="#31d2c0" stroke-width="2"/>
+<text x="91" y="344" fill="#ffffff" font-size="28" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">Mentoría profesional personalizada</text>
+<text x="91" y="381" fill="#d5ffff" font-size="25" font-family="DejaVu Sans,Arial,sans-serif">en Gestión de SST</text>
+<text x="70" y="460" fill="#ffffff" font-size="24" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">45 min por sesión  ·  WhatsApp  ·  Desde 10 USD/mes</text>
+<text x="69" y="526" fill="#a6ebe6" font-size="25" font-family="DejaVu Sans,Arial,sans-serif">Aprende  •  Aplica  •  Avanza</text>
+<text x="69" y="596" fill="#ffffff" font-size="21" font-family="DejaVu Sans,Arial,sans-serif" font-weight="700">De la Reacción a la Prevención</text>
+<g filter="url(#shadow)" transform="translate(743,55) rotate(6 190 262)">
+<rect x="44" y="11" width="338" height="540" rx="47" fill="#061c37" stroke="#16324b" stroke-width="9"/>
+<rect x="61" y="37" width="304" height="489" rx="32" fill="url(#phone)"/>
+<path d="M143 39h140v20q-5 12-20 12H163q-20 0-20-12Z" fill="#061c37"/>
+<rect x="83" y="81" width="261" height="332" rx="21" fill="#e5f7f7"/>
+<rect x="83" y="81" width="261" height="51" rx="21" fill="#007b85"/>
+<text x="105" y="115" font-size="19" font-weight="700" fill="#ffffff" font-family="DejaVu Sans,Arial,sans-serif">Mentoría individual</text>
+<circle cx="211" cy="225" r="64" fill="#fcceb0"/>
+<path d="M148 218q-12-82 65-84 78 8 62 90l-14-36-12-10q-31 18-87 16Z" fill="#1b3857"/>
+<path d="M116 374q10-104 99-105 91 0 111 105Z" fill="#00205b"/>
+<path d="M175 278l38 43 40-43" fill="none" stroke="#f0b38e" stroke-width="8"/>
+<rect x="107" y="394" width="217" height="45" rx="22" fill="#d1eded"/>
+<circle cx="147" cy="416" r="15" fill="#25a95b"/>
+<circle cx="212" cy="416" r="15" fill="#c9d9d9"/>
+<circle cx="278" cy="416" r="15" fill="#e54649"/>
+<path d="M140 414l14 4m-12 3 10-8" stroke="white" stroke-width="3" stroke-linecap="round"/>
+<text x="123" y="477" font-size="22" fill="#234260" font-weight="700" font-family="DejaVu Sans,Arial,sans-serif">Sesión en vivo</text>
+</g>
+<g transform="translate(1050 83)"><circle r="53" fill="#13a65a" stroke="#f2fff7" stroke-width="10"/><path d="M-25 25l7-21q-8-26 15-39 28-13 44 15 10 21-8 40Q15 40-8 28Z" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/><path d="M-14-17q10 25 31 28" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/></g>
 </svg>
