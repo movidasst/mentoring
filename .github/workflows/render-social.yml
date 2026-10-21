@@ -1,31 +1,34 @@
-name: Render Mentoring SST preview image
+name: Mantener previsualización de Mentoring SST Plus
 on:
   push:
     branches: [main]
     paths:
-      - og-mentoring.svg
+      - og-mentoring.jpg
+      - .github/workflows/render-social.yml
   workflow_dispatch:
 permissions:
   contents: write
 jobs:
-  render-social:
+  social-preview:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Convert vector social artwork to PNG
+      - name: Generate matching PNG from official preview image
         run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y librsvg2-bin
-          rsvg-convert --width 1200 --height 630 --output og-mentoring.png og-mentoring.svg
-          file og-mentoring.png
-      - name: Publish generated PNG to main
+          python -m pip install --disable-pip-version-check pillow
+          python - <<'PY'
+          from PIL import Image
+          with Image.open('og-mentoring.jpg') as source:
+              source.convert('RGB').resize((1200, 630), Image.Resampling.LANCZOS).save('og-mentoring.png', optimize=True)
+          PY
+      - name: Commit PNG if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add og-mentoring.png
           if ! git diff --cached --quiet; then
-            git commit -m "Actualizar imagen social PNG de Mentoring SST Plus"
+            git commit -m "Sincronizar PNG social con imagen oficial de mentoring"
             git push
           fi
