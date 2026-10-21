@@ -1,39 +1,40 @@
-# Mentoring SST · La Movida de SST Plus
+# Mentoring SST Plus — La Movida de SST+
 
-> Servicio de mentoría y asesoría estratégica en Seguridad y Salud en el Trabajo (SST) dirigido por David Linares Brea.
+> Mentoría profesional individual en Gestión de Seguridad y Salud en el Trabajo (SST) dirigida por David Linares Brea mediante una suscripción mensual voluntaria.
 
 Canonical: https://mentoring.movidasst.com/
 Language: es
 Region: Latinoamérica
+Mentor: https://davidlinares.movidasst.com/
 
-## Servicio principal
+## Servicio
+Acompañamiento individual basado en diagnóstico de necesidades, objetivo de aprendizaje, sesiones de mentoría, consultas, compromisos aplicables y evaluación de avances. El método CERCA guía la conversación: Clima, Escuchar, Retar, Construir y Acción.
 
-Sesión Estratégica SST 1 a 1: espacio online de 45 minutos por Google Meet para analizar un problema, documento, decisión o proceso específico de SST y definir próximos pasos aplicables.
+## Canales y duración
+- Videollamadas individuales de 45 minutos por WhatsApp, con cita previa.
+- Consultas por texto o notas de voz de WhatsApp sujetas a límites y tiempos de respuesta por plan.
+- No se contratan ni programan sesiones por Google Meet como modalidad habitual de esta suscripción.
 
-## Áreas frecuentes
+## Planes mensuales informados
+- Esencial: 10 USD al mes; 2 videollamadas y 8 consultas.
+- Plus: 15 USD al mes; 3 videollamadas y 12 consultas.
+- Premium: 20 USD al mes; 4 videollamadas y 16 consultas.
+- Sin renovaciones automáticas ni obligación de permanencia; las condiciones completas están en el sitio.
 
-- Identificación de peligros, evaluación de riesgos, IPERC y procesos peligrosos.
-- ISO 45001, auditorías y sistemas de gestión.
-- PSSST, procedimientos y cumplimiento.
-- Indicadores y análisis de datos SST.
-- Capacitación, diseño instruccional, e-learning y LMS.
-- Inteligencia artificial aplicada responsablemente a SST.
-- Higiene ocupacional, ergonomía y emergencias.
-- Investigación de accidentes y toma de decisiones preventivas.
+## Ámbitos de aprendizaje
+- Gestión de SST y sistemas de gestión.
+- Identificación de peligros y evaluación de riesgos.
+- Gestión preventiva, indicadores y programas.
+- Competencias profesionales y reflexión sobre decisiones reales.
 
-## Modalidades
+## Límites del acompañamiento
+La mentoría no sustituye auditorías, asesoría legal, elaboración integral de documentos, atención de emergencias ni consultoría ilimitada. Disponibilidad y horarios se confirman antes de pagar.
 
-- Mentoría individual para profesionales.
-- Asesoría con alcance específico para empresas y equipos.
-
-## Responsable
-
-David Linares Brea
-Perfil: https://davidlinares.movidasst.com/
-LinkedIn: https://www.linkedin.com/in/davidlinaresbrea/
-Marca: https://www.movidasst.com/
-Contacto: info@movidasst.com
-
-## Principio
+## Recursos y responsable
+- Mentor y trayectoria: https://davidlinares.movidasst.com/
+- Ecosistema La Movida de SST+: https://www.movidasst.com/
+- Academia Movida SST: https://inscripciones.movidasst.com/
+- LinkedIn: https://www.linkedin.com/in/davidlinaresbrea/
+- Información actualizada del servicio: https://mentoring.movidasst.com/
 
 De la Reacción a la Prevención.
