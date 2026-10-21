@@ -1,9 +1,10 @@
-name: Mantener previsualización de Mentoring SST Plus
+name: Actualizar imagen social con logo oficial del HUB
 on:
   push:
     branches: [main]
     paths:
-      - og-mentoring.jpg
+      - og-mentoring-base.jpg
+      - logo-oficial-movida-sst-plus.png
       - .github/workflows/render-social.yml
   workflow_dispatch:
 permissions:
@@ -15,20 +16,38 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
-      - name: Generate matching PNG from official preview image
+      - name: Generar vista previa usando EXCLUSIVAMENTE el logo de principal
         run: |
           python -m pip install --disable-pip-version-check pillow
           python - <<'PY'
-          from PIL import Image
-          with Image.open('og-mentoring.jpg') as source:
-              source.convert('RGB').resize((1200, 630), Image.Resampling.LANCZOS).save('og-mentoring.png', optimize=True)
+          from PIL import Image, ImageDraw, ImageFont, ImageOps
+          logo_path = 'logo-oficial-movida-sst-plus.png'
+          source_path = 'og-mentoring-base.jpg'
+          with Image.open(source_path) as original:
+              poster = ImageOps.fit(original.convert('RGB'), (1200, 630), method=Image.Resampling.LANCZOS)
+          draw = ImageDraw.Draw(poster)
+          # Cubrir el emblema ajeno que aparecía en el pie de la ilustración anterior.
+          draw.rounded_rectangle((18, 495, 602, 624), radius=22, fill='#00205b', outline='#087e8b', width=2)
+          with Image.open(logo_path) as image:
+              official = ImageOps.contain(image.convert('RGBA'), (112,112), method=Image.Resampling.LANCZOS)
+          poster_rgba = poster.convert('RGBA')
+          poster_rgba.alpha_composite(official, (31, 503))
+          draw = ImageDraw.Draw(poster_rgba)
+          font_regular = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          font_bold = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          draw.text((159, 524), 'LA MOVIDA DE SST PLUS', font=ImageFont.truetype(font_bold, 24), fill='#FFFFFF')
+          draw.text((159, 568), 'De la Reacción a la Prevención', font=ImageFont.truetype(font_regular, 18), fill='#D7FFFF')
+          result = poster_rgba.convert('RGB')
+          result.save('og-mentoring.jpg', quality=90, optimize=True, progressive=True)
+          result.save('og-mentoring.png', optimize=True)
+          print('Previsualización recreada con logo institucional verificado')
           PY
-      - name: Commit PNG if changed
+      - name: Guardar las imágenes actualizadas
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add og-mentoring.png
+          git add og-mentoring.jpg og-mentoring.png
           if ! git diff --cached --quiet; then
-            git commit -m "Sincronizar PNG social con imagen oficial de mentoring"
+            git commit -m "Corregir imagen social con sello oficial del HUB"
             git push
           fi
