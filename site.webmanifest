@@ -9,13 +9,13 @@
   "theme_color": "#007b85",
   "icons": [
     {
-      "src": "/logo-movida-web.png?v=oficial-20261020",
+      "src": "/logo-movida-web.png?v=sello-20261020-final",
       "sizes": "256x256",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/favicon.ico?v=oficial-20261020",
+      "src": "/favicon.ico?v=sello-20261020-final",
       "sizes": "256x256",
       "type": "image/x-icon",
       "purpose": "any"
