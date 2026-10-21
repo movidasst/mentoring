@@ -16,9 +16,9 @@ Acompañamiento individual basado en diagnóstico de necesidades, objetivo de ap
 - No se contratan ni programan sesiones por Google Meet como modalidad habitual de esta suscripción.
 
 ## Planes mensuales informados
-- Esencial: 10 USD al mes; 2 videollamadas y 8 consultas.
-- Plus: 15 USD al mes; 3 videollamadas y 12 consultas.
-- Premium: 20 USD al mes; 4 videollamadas y 16 consultas.
+- Esencial: 15 USD al mes; 2 videollamadas y 8 consultas.
+- Plus: 20 USD al mes; 3 videollamadas y 12 consultas.
+- Premium: 25 USD al mes; 4 videollamadas y 16 consultas.
 - Sin renovaciones automáticas ni obligación de permanencia; las condiciones completas están en el sitio.
 
 ## Ámbitos de aprendizaje
