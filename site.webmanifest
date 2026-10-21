@@ -1,7 +1,7 @@
 {
-  "name": "Mentoring SST · La Movida de SST Plus",
-  "short_name": "Mentoring SST",
-  "description": "Mentoría y asesoría estratégica en Seguridad y Salud en el Trabajo.",
+  "name": "Mentoring SST Plus · La Movida de SST",
+  "short_name": "Mentoring SST Plus",
+  "description": "Mentoría individual en Gestión de SST por WhatsApp",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -9,9 +9,9 @@
   "theme_color": "#007b85",
   "icons": [
     {
-      "src": "/favicon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon",
       "purpose": "any"
     }
   ]
